@@ -22,15 +22,16 @@ class SimpleLinearRegression:
         return self.beta_0, self.beta_1
 
 
-advertising_data = [23, 26, 30, 34, 43, 48, 52, 57, 58]
-sales_data = [651, 762, 856, 1063, 1190, 1298, 1421, 1440, 1518]
+advertising_data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+sales_data = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 
 model = SimpleLinearRegression(advertising_data, sales_data)
 model.calculate_parameters()
 
 beta_0, beta_1 = model.get_parameters()
-print(f"Intercepto (Beta_0): {beta_0}")
 print(f"Pendiente (Beta_1): {beta_1}")
+print(f"Intercepto (Beta_0): {beta_0}")
+
 
 prediccion = model.predict(60)
 print(f"Predicción de ventas para Advertising = 60 millones: {prediccion} millones")
